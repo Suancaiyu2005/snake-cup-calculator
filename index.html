@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>蛇杖杯 · n16 赛道 · 计分器</title>
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-team="origin">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">◈</div>
+      <div class="brand-text">
+        <h1>蛇杖杯</h1>
+        <p>沉沦者的黑流树海 · n16 赛道 · 计分器</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button type="button" class="btn btn-ghost" id="btn-help">规则速览</button>
+      <button type="button" class="btn btn-ghost" id="btn-reset">重置</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main class="form-column" id="form"></main>
+
+    <aside class="side-column">
+      <div class="summary-card" id="summary-card">
+        <div class="summary-head">
+          <span class="summary-label">最终得分</span>
+          <span class="summary-team" id="summary-team">本源研修分队</span>
+        </div>
+        <div class="summary-total" id="summary-total">0</div>
+        <div class="summary-formula" id="summary-formula"></div>
+        <div class="summary-breakdown" id="summary-breakdown"></div>
+        <div class="summary-warnings" id="summary-warnings"></div>
+        <div class="summary-actions">
+          <button type="button" class="btn btn-primary" id="btn-export">导出明细</button>
+          <button type="button" class="btn btn-ghost" id="btn-copy">复制结果</button>
+        </div>
+        <p class="summary-note">数据仅保存在本机浏览器，不会上传。</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="mobile-bar" id="mobile-bar">
+    <div class="mobile-total">
+      <span>最终得分</span>
+      <strong id="mobile-total-value">0</strong>
+      <em id="mobile-coeff"></em>
+    </div>
+    <button type="button" class="btn btn-primary" id="btn-mobile-detail">明细</button>
+  </div>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet-head">
+        <h2 id="sheet-title">计分明细</h2>
+        <button type="button" class="icon-btn" id="btn-sheet-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="sheet-body" id="sheet-body"></div>
+    </div>
+  </div>
+
+  <div class="help-modal" id="help-modal" hidden>
+    <div class="help-panel" role="dialog" aria-modal="true" aria-labelledby="help-title">
+      <div class="sheet-head">
+        <h2 id="help-title">规则速览</h2>
+        <button type="button" class="icon-btn" id="btn-help-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="help-body" id="help-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="assets/rules.js"></script>
+  <script src="assets/engine.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
